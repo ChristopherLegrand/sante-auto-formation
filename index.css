@@ -1,0 +1,1017 @@
+
+/* HEADER */
+
+header{
+    background-color: white;
+    width: 100%;
+    height:100vh;
+}
+
+/* IMAGE FOND */
+
+#imageBkgWrap{
+    width:800px;
+    height:700px;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.svg {
+    position: absolute;
+    width:0;
+    height:0;
+}
+
+.clipped {
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: url("images/photo-haricot.jpg") center right;
+    background-size: cover;
+    -webkit-clip-path: url(#my-clip-path);
+    clip-path: url(#my-clip-path);
+    opacity:0;
+    transition: .8s ease 1.1s;
+    z-index:1500;
+}
+
+.clipped.visible{
+    opacity:1;
+}
+
+#ombre{
+    position: absolute;
+    top:130px;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: url("images/ombre-haricot.jpg") center right no-repeat;
+    background-size: contain;
+    opacity:0;
+    transition: .8s ease 1.1s;
+    z-index:1000;
+    max-height:calc(100vh - 130px);
+}
+
+#ombre.visible{
+    opacity:1;
+}
+
+
+/* TEXTE CENTRE */
+#contenuAlign{
+    text-align: center;
+    width:600px;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+#logo{
+    width: 183px;
+    vertical-align: middle;
+    margin-right:20px;
+    opacity: 0;
+    transition: opacity .9s ease .4s;
+}
+
+h1{
+    opacity: 0;
+    color: #484848;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 61px;
+    transition: opacity .9s ease .7s;
+}
+
+h1.visible{
+    opacity:1;
+}
+
+#logo.visible{
+    opacity:1;
+}
+
+h1 span{
+    display: block;
+    font-size: 68px;
+}
+
+#contenuAlign p{
+    width: 100%;
+    color: #474747;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 31px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    opacity:0;
+    transition: opacity .8s ease .10s;
+}
+
+#contenuAlign p.visible{
+    opacity:1;
+}
+
+#bloctitreText{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+#bleuBlancRouge{
+    width: 0%;
+    height:4px;
+    position: relative;
+    top: 17px;
+    font-size:0;
+    transition: width .9s ease .7s;
+}
+#bleuBlancRouge.visible{
+    width: 100%;
+}
+
+#bleuBlancRouge span{
+    display: inline-block;
+    width: 33.33333%;
+    height:100%;
+}
+
+.bleu{
+    background-color: #0783c5;
+}
+
+.blanc{
+    background-color: white;
+}
+
+.rouge{
+    background-color: #d92255;
+}
+
+/*  A LA UNE */
+#aLaUne{
+    padding:10px;
+    color:white;
+    font-size:13px;
+    font-weight:400;
+    background-color: #2b363e;
+    border:none;
+    margin-top:47px;
+    transition: all .1s linear;
+    cursor:pointer;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    z-index:3000;
+}
+
+#banniere {
+    display: inline-block;
+    vertical-align: middle;
+    width: 87%;
+    overflow: hidden;
+    position:relative;
+    top:-2px;
+    margin-left:20px;
+    white-space: nowrap;
+}
+
+#banniereWrap{
+    display: inline-block;
+    white-space: nowrap;
+    position:relative;
+    left:100%;
+    --banniere-wrap-width:0px;
+}
+
+@keyframes defile{
+    from {
+        left:100%;
+    }
+    to{
+        left: var(--banniere-wrap-width);
+    }
+}
+
+#banniereWrap p{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right:50px;
+}
+
+/* AGENDA */
+#agenda{
+    position: fixed;
+    top: -100vh;
+    left:0;
+    z-index:5000;
+    background-color: rgba(0, 0, 0, 0.91);
+    text-align: center;
+    width:100%;
+    height:100vh;
+    transition: top .3s ease;
+}
+
+#agenda.visible{
+    top:0px;
+}
+
+#agendContain{
+    position: absolute;
+    width:100%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+#agendaTextContain{
+    display:block;
+    margin-bottom:40px;
+}
+
+#agendaTextContain p{
+    color: white;
+    font-size:40px;
+}
+
+.tiret{
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #3287c7;
+    margin: auto;
+    margin-top: 29px;
+}
+
+#agenda img{
+    width:400px;
+    vertical-align: middle;
+}
+
+#agendaBtn{
+    cursor: pointer;
+    padding: 12px 18px;
+    width: 191px;
+    margin: auto;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #334551;
+    border: none;
+    border-radius: 20px;
+    opacity:0;
+    transition: background-color .1s linear, color .1s linear, opacity .9s ease .7s;
+}
+#agendaBtn.visible{
+    opacity:1;
+}
+
+#agendaBtn:hover{
+    background-color: #29363f;
+    color:#80c5e4;
+}
+
+iframe{
+    width:80%;
+    height:60vh;
+}
+
+#closeAgenda{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:40px;
+    right:40px;
+    cursor:pointer;
+    z-index:6000;
+}
+
+#closeAgenda span{
+    position: absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:3px;
+    background-color:white;
+    transition: all .3s ease;
+}
+
+#closeAgenda span:nth-child(1){
+    transform:translateY(25px) rotate(45deg);
+}
+
+#closeAgenda span:nth-child(2){
+    transform:translateY(25px) rotate(-45deg);
+}
+
+#closeAgenda:hover span{
+    opacity:0.3;
+}
+
+
+
+
+/* ARROW */
+#arrow{
+    position: absolute;
+    bottom:60px;
+    left:50%;
+    transform: translateX(-50%);
+    width: 60px;
+    animation: .8s linear  infinite alternate arrow;
+}
+
+@keyframes arrow {
+    from { opacity:1; }
+    to   { opacity:0; }
+  }
+
+
+/* SECTION 1 */
+#rectangleFond{
+    width:100%;
+    height:400px;
+    background-color: #4c7285;
+    background: url(images/bckg1.jpg) center fixed no-repeat;
+    background-size: cover;
+    padding-top:90px;
+}
+
+#rectangleCntreContain{
+    position: relative;
+    width:80%;
+    background-color: #fdf4ec;
+    margin:auto;
+    border:40px solid white;
+    text-align: center;
+    padding: 50px;
+
+    -webkit-box-shadow: 3px 15px 29px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 15px 29px -7px rgba(0,0,0,0.75);
+    box-shadow: 3px 15px 29px -7px rgba(0,0,0,0.75);
+}
+
+#image1{
+    width:48%;
+    vertical-align: middle;
+}
+
+.bloctext{
+    display: inline-block;
+    width:48%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#blocTexte1 {
+    position: relative;
+    top: 0px;
+}
+
+.invisibles{
+    position:relative;
+    top: 80px;
+    transition: all .6s ease .2s;
+    opacity: 0;
+}
+
+#blocTexte1 h2{
+    color: #08222f;
+    font-size: 47px;
+    font-weight: 400;
+    width: 310px;
+    text-align: center;
+    line-height: 42px;
+    margin: auto;
+}
+
+.bloctext p{
+    color: #474747;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    width:80%;
+    margin:auto;
+}
+
+
+.bloctext span{
+    width:100px;
+    height:2px;
+    background-color: #3288c7;
+    display:block;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+#image2{
+    width:34%;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    bottom:0;
+}
+
+#image2-responsive{
+    display:none;
+    width:100%;
+    height:200px;
+    object-fit: cover;
+    margin:30px 0;
+}
+
+#blocTexte2 h2{
+    color: #08222f;
+    font-size: 47px;
+    font-weight: 400;
+    width: 380px;
+    text-align: center;
+    line-height: 42px;
+    margin: auto;
+    
+}
+
+#blocTexte2{
+    position: relative;
+    left: -22%;
+}
+
+.logos-certif{
+    vertical-align: middle;
+    margin:10px 10px;
+}
+
+#logo-qualiopi{
+    width:250px;
+}
+
+/* SECTION 2 */
+#sectionTwo{
+    background: url(images/bckg2.jpg) top center no-repeat;
+    background-size: cover;
+    width:100%;
+    margin-top: 500px;
+    padding-top:660px;
+    padding-bottom:250px;
+    text-align: center;
+}
+
+#sectionTwo h2{
+    color: #ffffff;
+    font-size: 47px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 42px;
+    margin: auto;
+}
+
+#sectionTwo span{
+    width:100px;
+    height:2px;
+    background-color: #3288c7;
+    display:block;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+#etoiles{
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 130px;
+}
+
+#rate{
+    color: white;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+#base{
+    color: #bfbfbf;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width:1700px){
+    #image2 {
+        width: 38%;
+    }
+}
+
+@media screen and (max-width:1500px){
+    #image2 {
+        width: 42%;
+    }
+
+    #blocTexte2 {
+        position: relative;
+        left: -32%;
+    }
+
+    .clipped {
+        width: 80%;
+        height: 85%;
+    }
+
+    #ombre{
+        width: 80%;
+        height: 85%;
+    }
+    
+}
+
+@media screen and (max-width:1450px){
+    #contenuAlign {
+        left: 3%;
+    }
+
+    nav ul {
+        margin-left: 0;
+    }
+    
+    nav {
+        background-color: rgba(255 255 255 / 35%);
+    }
+}
+
+@media screen and (max-width:1280px){
+    nav ul {
+        font-size: 0;
+        margin-left: 0px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .hiddenliens {
+        top: 68px;
+    }
+
+    #blocTexte1 {
+        top:80px;
+    }
+
+    h1 {
+        font-size: 54px;
+        line-height: 50px;
+    }
+
+    h1 span {
+        font-size: 58px;
+    }
+
+    #logo {
+        width: 145px;
+    }
+
+    #bleuBlancRouge {
+        height: 3px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    #contenuAlign {
+        left: 1%;
+    }
+
+    nav a {
+        padding: 25px 50px;
+    }
+
+    #rectangleFond {
+        height: 281px;
+    }
+
+    #sectionTwo {
+        margin-top: 590px;
+    }
+}
+
+@media screen and (max-width:1150px){
+    .clipped {
+        right: -63px;
+        width: 70%;
+        height: 74%;
+    }
+
+    #ombre{
+        right: -63px;
+        width: 70%;
+        height: 74%;
+    }
+
+    #blocTexte1 {
+        top: 173px;
+        left: 48px;
+    }
+}
+
+@media screen and (max-width:1060px){
+    #contenuAlign {
+        left: -4%;
+    }
+
+    #rectangleCntreContain {
+        width: 76%;
+        border: 28px solid white;
+        text-align: center;
+    }
+
+    #sectionTwo {
+        margin-top: 590px;
+    }
+
+}
+
+@media screen and (max-width:1020px){
+    #sectionTwo {
+        margin-top: 650px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .clipped {
+        right: -79px;
+        width: 60%;
+        height: 62%;
+    }
+
+    #ombre{
+        right: -79px;
+        width: 60%;
+        height: 62%;
+    }
+
+    #image1 {
+        width: 100%;
+        display: block;
+        position: inherit;
+        padding:0;
+        margin:0;
+    }
+
+    #image2{
+        display:none;
+    }
+    
+    #image2-responsive{
+        display:block;
+        padding:0;
+        margin:0;
+    }
+
+    #blocTexte1 {
+        position: inherit;
+        display: block;
+        width:100%;
+        padding:0;
+        margin-top:0;
+        margin-left:0;
+        margin-right:0;
+        margin-bottom:60px;
+        top: 0;
+        left: 0;
+
+    }
+
+    #blocTexte2 {
+        position: inherit;
+        display: block;
+        width:100%;
+        padding:0;
+        margin-top:60px;
+        margin-left:0;
+        margin-right:0;
+        margin-bottom:0px;
+        top: 0;
+        left: 0;
+
+    }
+
+    #sectionTwo {
+        margin-top: 1251px;
+    }
+}
+
+@media screen and (max-width:950px){
+    nav a {
+        font-size: 14px;
+    }
+
+    .hiddenliens {
+        top: 66px;
+    }
+}
+
+@media screen and (max-width:900px){
+
+
+    .svg {
+        display:none;
+    }
+
+    #hamburger{
+        display:block;
+    }
+
+    #imageBkgWrap{
+        width:100%;
+        height:250px;
+        position: inherit;
+        top:0;
+        right:0;
+        left:0;
+    }
+
+    .clipped {
+        position: inherit;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url("images/photo-haricot.jpg") center right no-repeat;
+        background-size:cover;
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+
+    #ombre{
+        display:none;
+    }
+
+    header{
+        height:inherit;
+    }
+
+    #contenuAlign {
+        text-align: center;
+        width: 100%;
+        position: inherit;
+        top: 0%;
+        left: 0;
+        transform: translateY(0%);
+        padding: 34px 0;
+    }
+
+    #contenuAlign p {
+        margin-bottom: 36px;
+    }
+
+    #arrow {
+        display:none;
+    }
+
+    nav{
+        width:100%;
+        padding:60px 0;
+        border-bottom: #a4a4a4 1px solid;
+        position: fixed;
+        top:-400px;
+        z-index:4000;
+        background-color:#102736;;
+        border-bottom:none;
+        transition: top .1s ease;
+    }
+
+    nav ul{
+        display:block;
+        text-align: center;
+    }
+
+    nav li{
+        display:block;
+        background-color:none;
+    }
+
+    nav a {
+        background-color:#102736;
+        color: white;
+        font-size: 19px;
+        padding: 9px 0px;
+    }
+
+    .hiddenliens{
+        position: inherit;
+        top:0px;
+        left:0px;
+        width:100%;
+        text-align: center;
+        transition: all .2s ease .1s;
+        z-index:5000;
+        display:none;
+    }
+    
+    nav li:hover .hiddenliens{
+        left:0px;
+    }
+
+    .hiddenliens a {
+        color: white;
+        font-size: 17px;
+        padding: 9px 0px;
+    }
+
+    .hiddenliens a:hover{
+        background-color: #102736;
+        color:white;
+    }
+
+
+}
+
+@media screen and (max-width:750px){
+    #rectangleCntreContain {
+        width: 60%;
+        border: 0px solid white;
+        text-align: center;
+    }
+
+    #sectionTwo {
+        padding-top: 876px;
+        padding-bottom: 160px;
+    }
+}
+
+@media screen and (max-width:675px){
+    #banniere {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:640px){
+    footer {
+        padding-top: 60px;
+        padding-right: 0px;
+        padding-bottom: 120px;
+        padding-left: 0px;
+    }
+
+    footer img {
+        display:block;
+        margin:auto;
+        margin-bottom:20px;
+    }
+
+    #infoFooter {
+        display: block;
+        margin: 0 0px;
+    }
+
+    footer ul {
+        display: block;
+        margin-bottom:20px;
+    }
+}
+
+@media screen and (max-width:620px){
+    h1 {
+        font-size: 47px;
+        line-height: 42px;
+    }
+
+    h1 span {
+        font-size: 51px;
+    }
+
+    #sectionTwo {
+    }
+}
+
+@media screen and (max-width:591px){
+    #sectionTwo{
+        padding-top: 810px;
+    }
+}
+
+@media screen and (max-width:550px){
+    #logo{
+        display:block;
+        margin:auto;
+        margin-bottom:20px;
+    }
+
+    #blocTexte1 h2{
+        width: 100%;
+    }
+
+    #blocTexte2 h2{
+        width: 100%;
+    }
+
+    .bloctext p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+    #sectionTwo{
+        padding-top: 870px;
+    }
+
+    #banniere {
+        width: 60%;
+    }
+
+    #contenuAlign p {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:450px){
+    #sectionTwo{
+        padding-top: 700px;
+    }
+
+    #blocTexte1 h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    #blocTexte2 h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    #sectionTwo h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    #sectionTwo p {
+        width: 80%;
+    }
+
+    #logo-qualiopi {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:383px){
+    #sectionTwo{
+        padding-top: 730px;
+    }
+}
+
+@media screen and (max-width:374px){
+    #sectionTwo{
+        padding-top: 800px;
+    }
+}
+
+@media screen and (max-width:367px){
+    #sectionTwo{
+        padding-top: 880px;
+    }
+}
+
+@media screen and (max-width:325px){
+    #sectionTwo{
+        padding-top: 960px;
+    }
+}
+
+@media screen and (max-width:310px){
+    #sectionTwo{
+        padding-top: 1060px;
+    }
+}
+
+@media screen and (max-width:270px){
+    #sectionTwo{
+        padding-top: 1400px;
+    }
+}
+/* ///---HEIGHT */
+@media screen and (min-width:1000px)and (max-height:750px){
+    .clipped {
+        width: 80%;
+        height: 80%;
+    }
+
+    #ombre{
+        width: 80%;
+        height: 80%;
+    }
+}
+@media screen and (min-width:1000px)and (max-height:650px){
+    .clipped {
+        width: 70%;
+        height: 70%;
+    }
+
+    #ombre{
+        width: 70%;
+        height: 70%;
+    }
+}

@@ -1,0 +1,213 @@
+
+
+/* #BANDEAU */
+
+#bandeau{
+    background: url(images/congres-bleu.jpg) center right no-repeat fixed;
+    background-size:cover;
+    padding-top: 240px;
+    padding-bottom: 206px;
+}
+
+#bandeauText {
+    transition: all ease 3s;
+    text-align:center;
+    opacity:0;
+}
+
+#bandeauText.visible{
+    opacity:1;
+}
+
+#bandeauText h1{
+    color: #ffffff;
+    font-size: 47px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 42px;
+    margin: auto;
+}
+
+#bandeauText span {
+    width: 100px;
+    height: 2px;
+    background-color: #3288c7;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* SETCION */
+
+nav{
+    background-color: white !important;
+    border-bottom:none !important;
+}
+
+#wrapper{
+ text-align:center;
+ padding:60px 0;
+ width:80%;
+ margin:auto;
+}
+
+.article{
+    font-weight:500;
+}
+
+.titrearticle{
+    font-size: 20px;
+    font-weight: 600;
+    color: #284760;
+    margin-top: 27px;
+}
+
+.datearticle{
+    margin-top:20px;
+    color: #284760;
+}
+
+.textarticle{
+    margin-top:20px;
+    font-size: 17px;
+}
+
+.separateur{
+    width:200px;
+    height:1px;
+    background-color:#284760;
+    display: block;
+    margin:auto;
+    margin-top:30px;
+}
+
+
+@media screen and (max-width:1450px){
+    nav ul {
+        margin-left: 0;
+    }
+    
+    nav {
+        background-color: rgba(255 255 255 / 35%);
+    }
+}
+
+@media screen and (max-width:1280px){
+    nav ul {
+        font-size: 0;
+        margin-left: 0px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .hiddenliens {
+        top: 68px;
+    }
+
+}
+
+@media screen and (max-width:1200px){
+    nav a {
+        padding: 25px 50px;
+    }
+}
+
+@media screen and (max-width:950px){
+    nav a {
+        font-size: 14px;
+    }
+
+    .hiddenliens {
+        top: 66px;
+    }
+}
+
+@media screen and (max-width:900px){
+
+    #hamburger{
+        display:block;
+    }
+
+    nav{
+        width:100%;
+        padding:60px 0;
+        border-bottom: #a4a4a4 1px solid;
+        position: fixed;
+        top:-400px;
+        z-index:4000;
+        background-color:#102736;;
+        border-bottom:none;
+        transition: top .1s ease;
+    }
+
+    nav ul{
+        display:block;
+        text-align: center;
+    }
+
+    nav li{
+        display:block;
+        background-color:none;
+    }
+
+    nav a {
+        background-color:#102736;
+        color: white;
+        font-size: 19px;
+        padding: 9px 0px;
+    }
+
+    .hiddenliens{
+        position: inherit;
+        top:0px;
+        left:0px;
+        width:100%;
+        text-align: center;
+        transition: all .2s ease .1s;
+        z-index:5000;
+        display:none;
+    }
+    
+    nav li:hover .hiddenliens{
+        left:0px;
+    }
+
+    .hiddenliens a {
+        color: white;
+        font-size: 17px;
+        padding: 9px 0px;
+    }
+
+    .hiddenliens a:hover{
+        background-color: #102736;
+        color:white;
+    }
+}
+
+@media screen and (max-width:640px){
+    footer {
+        padding-top: 60px;
+        padding-right: 0px;
+        padding-bottom: 120px;
+        padding-left: 0px;
+    }
+
+    footer img {
+        display:block;
+        margin:auto;
+        margin-bottom:20px;
+    }
+
+    #infoFooter {
+        display: block;
+        margin: 0 0px;
+    }
+
+    footer ul {
+        display: block;
+        margin-bottom:20px;
+    }
+}

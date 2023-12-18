@@ -1,0 +1,318 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* NAV */
+nav{
+    width:100%;
+    border-bottom: #a4a4a4 1px solid;
+    position: fixed;
+    top:-250px;
+    z-index:4000;
+    transition:background-color .3s ease, border-bottom .3s ease, top .9s ease;
+
+    -webkit-box-shadow: 0px -7px 26px 0px #000000; 
+    box-shadow: 0px -7px 26px 0px #000000;
+}
+
+nav.visible{
+    top:0px;
+}
+
+.fondBlanc{
+    background-color: white;
+    border-bottom: none;
+}
+
+nav ul{
+    font-size:0;
+    margin-left:60px;
+}
+
+nav li:hover {
+    background-color: #334551;
+}
+
+nav li {
+    display: inline-block;
+    position:relative;
+    transition: all .2s ease;
+}
+
+nav a{
+    display:block;
+    color:#162d3b;
+    font-size:17px;
+    font-weight: 700;
+    transition:all .1s linear;
+    padding:25px 60px;
+}
+
+nav li:hover a{
+    color:white;
+}
+
+.hiddenliens{
+    background-color: #334551;
+    position: absolute;
+    top:69px;
+    left:-500px;
+    width:100%;
+    text-align: center;
+    transition: all .2s ease .1s;
+    z-index:-5000;
+}
+
+nav li:hover .hiddenliens{
+    left:0px;
+}
+
+.hiddenliens a{
+    padding:20px 0;
+    font-size:16px;
+    color:white;
+}
+
+.hiddenliens a:hover{
+    background-color: #29363f;
+    color:#80c5e4;
+}
+
+/* HAMBURGER */
+
+#hamburger{
+    display:none;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 7px;
+    left: 20px;
+    z-index:2000;
+    cursor:pointer;
+    padding:5px;
+    z-index:72000;
+}
+
+#hamburger span{
+    width:100%;
+    height:3px;
+    background-color:white;
+    display:block;
+    margin:8px 0;
+    transition:all .1s ease;
+}
+
+#hamburger span:nth-child(2).active{
+    opacity:0;
+}
+
+#hamburger span:nth-child(1).active{
+    transform:rotate(-45deg) translate(-7px,8px);
+}
+
+#hamburger span:nth-child(3).active{
+    transform:rotate(45deg) translate(-8px,-7px);
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #334551;
+    font-weight: 800;
+    text-align: center;
+    padding:60px 0;
+}
+
+footer ul{
+    display:inline-block;
+    vertical-align: middle;
+}
+
+footer ul li{
+    line-height: 22px;
+}
+
+footer a{
+    color:white;
+    font-size:13px;
+}
+
+footer a:hover{
+    color:#80c5e4;
+}
+
+#infoFooter{
+    color:white;
+    font-size:13px;
+    display: inline-block;
+    vertical-align: middle;
+    margin:0 70px;
+    line-height: 22px;
+}
+
+footer img{
+    vertical-align: middle;
+}
+
+#logofooter{
+    margin-right: 35px;
+}
+
+#qualiopi{
+    width: 200px;
+}
+
+
+
+@media screen and (max-width:1450px){
+    nav ul {
+        margin-left: 0;
+    }
+    
+    nav {
+        background-color: rgba(255 255 255 / 35%);
+    }
+}
+
+@media screen and (max-width:1280px){
+    nav ul {
+        font-size: 0;
+        margin-left: 0px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .hiddenliens {
+        top: 68px;
+    }
+
+}
+
+@media screen and (max-width:1200px){
+    nav a {
+        padding: 25px 50px;
+    }
+}
+
+@media screen and (max-width:950px){
+    nav a {
+        font-size: 14px;
+    }
+
+    .hiddenliens {
+        top: 66px;
+    }
+}
+
+@media screen and (max-width:900px){
+
+    #hamburger{
+        display:block;
+    }
+
+    nav{
+        width:100%;
+        padding:60px 0;
+        border-bottom: #a4a4a4 1px solid;
+        position: fixed;
+        top:-400px;
+        z-index:4000;
+        background-color:#102736 !important;
+        border-bottom:none;
+        transition: top .1s ease;
+    }
+
+    nav ul{
+        display:block;
+        text-align: center;
+    }
+
+    nav li{
+        display:block;
+        background-color:none;
+    }
+
+    nav a {
+        background-color:#102736;
+        color: white;
+        font-size: 19px;
+        padding: 9px 0px;
+    }
+
+    .hiddenliens{
+        position: inherit;
+        top:0px;
+        left:0px;
+        width:100%;
+        text-align: center;
+        transition: all .2s ease .1s;
+        z-index:5000;
+        display:none;
+    }
+    
+    nav li:hover .hiddenliens{
+        left:0px;
+    }
+
+    .hiddenliens a {
+        color: white;
+        font-size: 17px;
+        padding: 9px 0px;
+    }
+
+    .hiddenliens a:hover{
+        background-color: #102736;
+        color:white;
+    }
+
+    #logofooter {
+        margin-right: 0px;
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+    #infoFooter {
+        display: block;
+    }
+
+    #qualiopi {
+        width: 200px;
+        margin-top: 38px;
+    }
+}
+
+@media screen and (max-width:640px){
+    footer {
+        padding-top: 60px;
+        padding-right: 0px;
+        padding-bottom: 120px;
+        padding-left: 0px;
+    }
+
+    footer img {
+        display:block;
+        margin:auto;
+        margin-bottom:20px;
+    }
+
+    #infoFooter {
+        display: block;
+        margin: 0 0px;
+    }
+
+    footer ul {
+        display: block;
+        margin-bottom:20px;
+    }
+}
